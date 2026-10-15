@@ -1,9 +1,16 @@
 [project]
 name = "sui"
 version = "0.1.0"
-description = "Add your description here"
+description = "Slurm GPU utilization display"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.10"
 dependencies = [
     "rich>=15.0.0",
 ]
+
+[project.scripts]
+sui = "sui.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.10.2,<0.11"]
+build-backend = "uv_build"
